@@ -1,0 +1,47 @@
+/* Global CSS for all pages */
+
+* {
+    /* Sizing helper: See Workbook 1b, page 2-33. */
+    box-sizing: border-box;
+
+    /* 
+       Vizualization helper: While styling or debugging your HTML & CSS, 
+       uncomment the rule below to see all the boxes on your page more
+       clearly! (Remove this outline before submitting: users won't 
+       want to see it!)
+    */
+    /* outline: 1px dotted red; */
+}
+
+:root {
+    font-size: 1rem;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    background-color: #f0f0f0; /* Set background color */
+  }
+main{
+    padding: 1rem;
+}
+Button{
+    background-color: #4CAF50; /* Green for submit button */
+  color: white;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Change cursor on hover */
+  }
+  Button:hover{
+    background-color: #3e8e41; /* Darken on hover */
+  }
+  #username, #fullname, #password{
+    width: 100%; /* Set width for input fields */
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  }

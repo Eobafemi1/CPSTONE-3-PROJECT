@@ -1,0 +1,26 @@
+body {
+    background-color: #f0f0f0; /* Set background color */
+  }
+  
+  h1 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Set heading color */
+  }
+  #registerButton{
+    background-color: #4CAF50; /* Green for submit button */
+  color: white;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Change cursor on hover */
+  }
+  #registerButton:hover{
+    background-color: #3e8e41; /* Darken on hover */
+  }
+  #username, #fullname, #password{
+    width: 100%; /* Set width for input fields */
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  }

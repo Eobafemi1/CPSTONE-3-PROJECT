@@ -1,0 +1,35 @@
+<head><link rel="stylesheet" href="./global.css"></head>
+<a href="post.html">Post</a>
+<a href="javascript:logout()">LogOut</a>
+bio
+<input type="text" id="bioElement">
+<button id="buttonsavebio">save</button>
+<div id="bioOutput"></div> 
+
+<script src="./auth.js"></script>
+<script >
+fetch(apiBaseURL+"/api/users/"+localStorage.username, {
+        method: "GET",
+        headers: {
+           
+            Authorization: "Bearer " + localStorage.token
+        }
+        
+    }).then(response =>response.json() ).then(data=>bioOutput.innerHTML=data.bio);   
+buttonsavebio.onclick=e=>{
+ fetch(apiBaseURL+"/api/users/"+localStorage.username, {
+        method: "PUT",
+        headers: {
+            accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.token
+        },
+        body: JSON.stringify({
+            bio: bioElement.value
+        })
+    }).then(response => {
+        console.log(response);
+        location = "/profile.html";  //force refresh
+    });   
+}
+</script>
